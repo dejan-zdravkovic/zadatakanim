@@ -1,0 +1,75 @@
+#div-1 {
+    background-color: #050210;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#div-2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50px;
+    left: 50px;
+    position: absolute;
+
+    background: repeating-linear-gradient( #fb5dad, #55fb9f, #b97aff);
+}
+
+#div-2::before {
+    content: '';
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    position: absolute;
+    animation: my-animation-2 2s linear infinite;
+
+    filter: brightness(120%) blur(30px) opacity(50%);
+    background: linear-gradient( #fb5dad, #55fb9f, #b97aff);
+}
+
+#div-3 {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+  
+    background-color: #050210;
+}
+
+#div-3::before {
+    content: '';
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin-left: 0;
+    margin-top: 0;
+    position: absolute;
+    background-color: #0d052b;
+    animation: my-animation 1s ease-out infinite;
+}
+
+
+@keyframes my-animation {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1,1);
+    }
+}
+
+
+@keyframes my-animation-2 {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
